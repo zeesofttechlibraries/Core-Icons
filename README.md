@@ -1,10 +1,41 @@
-# CoreIcons Module
+# CoreIcons Module [![](https://jitpack.io/v/zeesofttechlibraries/Core-Icons.svg)](https://jitpack.io/#zeesofttechlibraries/Core-Icons)
 
 This module provides centralized access to all drawable icons in the core module.
 
+## Dependency
+
+First, add the JitPack repository to your `settings.gradle` or `settings.gradle.kts` file:
+
+```kotlin
+// settings.gradle.kts
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
+
+Next, add the following dependency to your `build.gradle` or `build.gradle.kts` file:
+
+
+```kotlin
+// build.gradle.kts
+dependencies {
+    implementation("com.github.zeesofttechlibraries:Core-Icons:1.0.0")
+}
+```
+
 ## Usage
 
-To use an icon from this module, call the `getIcons` function with one of the constants from `GetIcons.Icon`.
+To use an icon from this module, first import `GetIcons`:
+
+```kotlin
+import com.zeesofttechlibraries.coreicons.GetIcons
+```
+
+Then, call the `getIcons` function with one of the constants from `GetIcons.Icon`.
 
 ```kotlin
 val iconId = GetIcons.getIcons(GetIcons.Icon.BACK_IC)
